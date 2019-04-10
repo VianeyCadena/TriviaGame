@@ -5,54 +5,54 @@ $(document).ready(function(){
 //Array with all the questions, options, and answers
 
 var questionsBank = [{
-    ques: "Pregunta uno",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "Escuela fundada en 1919 en Alemania, considerada como la cuna del diseño moderno",
+    ans: ["Escuela de Chicago", "Bauhaus", "INBA", "Universidad de Yale"],
+    correct: "Bauhaus",
 },
 {
-    ques: "Pregunta dos",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "¿Qué es la estética?",
+    ans: ["El gusto del artista", "La opinión del espectador", "Doctrina filosófica del arte", "Lo que es bello"],
+    correct: "Doctrina filosófica del arte",
 },
 {
-    ques: "Pregunta tres",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "¿Cuál de los siguientes términos corresponden a la anatomía de la letra?",
+    ans: ["Ápice, espolón, ojal", "Medianil, margen, calle", "Tracking y kerning", "Sans, Sans Serif"],
+    correct: "Ápice, espolón, ojal",
 },
 {
-    ques: "Pregunta cuatro",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "En tipografía: Grupo de signos escriturales que comparten rasgos de diseño comunes",
+    ans: ["Anatomía de la letra", "Manual tipográfico", "Tipos de letras", "Familia tipográfica"],
+    correct: "Familia tipográfica",
 },
 {
-    ques: "Pregunta cinco",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "Es un grupo de reglas básicas en la mezcla de percepción de colores para conseguir el efecto deseado",
+    ans: ["Psicología del color", "Teoría del color", "Colores complementarios", "Triada"],
+    correct: "Teoría del color",
 },
 {
-    ques: "Pregunta seis",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "¿Cuáles son los llamados colores luz?",
+    ans: ["CMYK: Cian, Magenta, Amarillo y Negro", "Colores primarios", "Colores secundarios", "RGB: Red, Green, Blue"],
+    correct: "RGB: Red, Green, Blue",
 },
 {
-    ques: "Pregunta siete",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "¿Cuáles son los colores pigmento?",
+    ans: ["Tintas acuosas", "CMYK: Cian, Magenta, Amarillo y Negro", "RGB: Red, Green, Blue", "Monocromias"],
+    correct: "CMYK: Cian, Magenta, Amarillo y Negro",
 },
 {
-    ques: "Pregunta ocho",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "¿Qué es la asimetría?",
+    ans: ["Desequilibrio", "Diferencia entre partes", "Desequilibrio visual", "Desigualdad entre las partes de un todo"],
+    correct: "Desigualdad entre las partes de un todo",
 },
 {
-    ques: "Pregunta nueve",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "Disposición de los distintos elementos dentro del espacio visual de manera equilibrada y ordenada",
+    ans: ["Composición", "Estética", "Simetria", "Mensaje"],
+    correct: "Composición",
 },
 {
-    ques: "Pregunta diez",
-    ans: ["optionA", "optionB", "optionC", "optionD"],
-    correct: "optionA",
+    ques: "Disciplina que se ocupa del estudio comparativo de los sistemas de signos",
+    ans: ["Sintaxis", "Semantica", "Semiótica", "Estética"],
+    correct: "Semiótica",
 }
 ]
 
@@ -60,7 +60,7 @@ var questionsBank = [{
 
 var gameState = {
 
-    timeRemaining : 60,
+    timeRemaining : 90,
 
     startTimer: function() {
         $("#counter").text("Time remaining: " + gameState.timeRemaining);
@@ -112,16 +112,17 @@ var trivia = {
             var answer3 = questionsBank[i].ans[2];
             var answer4 = questionsBank[i].ans[3];
 
-            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer1 + '</label></div>');
-            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer2 + '</label></div>');
-            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer3 + '</label></div>');
-            divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer4 + '</label></div>');
+            divContainer.append('<div class="form-check"> <input class="form-check-input" type="radio" name="radio-group'+ i +'" id="radio'+ i +'"><label class="form-check-label" id="radio'+ i +'label" for="radio'+ i +'">' + answer1 + '</label></div>');
+            divContainer.append('<div class="form-check"> <input class="form-check-input" type="radio" name="radio-group'+ i +'" id="radio'+ i +'"><label class="form-check-label" id="radio'+ i +'label" for="radio'+ i +'">' + answer2 + '</label></div>');
+            divContainer.append('<div class="form-check"> <input class="form-check-input" type="radio" name="radio-group'+ i +'" id="radio'+ i +'"><label class="form-check-label" id="radio'+ i +'label" for="radio'+ i +'">' + answer3 + '</label></div>');
+            divContainer.append('<div class="form-check"> <input class="form-check-input" type="radio" name="radio-group'+ i +'" id="radio'+ i +'"><label class="form-check-label" id="radio'+ i +'label" for="radio'+ i +'">' + answer4 + '</label></div>');
 
         }
 
-        var doneButton = $("#doneBtn");
+        var doneButton = "<div id='divBtn'><button class='btn btn-primary' id='doneBtn' type='button'>Submite</button></div>";
         divContainer.append(doneButton);
-        $("#doneBtn").on("click", gameState.stopTimer);
+        $("#doneBtn").on("click", gameState.stopTimer)
+        console.log(doneButton);
     },
 
     checkAnswers: function() {
